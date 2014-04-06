@@ -16,8 +16,9 @@
     ],
     "autoload": {
         "psr-0": {
-            "ZFStarterMail\\": "src/"
-        }
+            "ZFStarterMail": "src"
+        },
+        "classmap" : ["Module.php"]
     },
     "require": {
         "php": ">=5.3.3",
