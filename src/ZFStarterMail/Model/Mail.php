@@ -88,7 +88,7 @@ class Mail
      */
     public static function getLayout()
     {
-        $layout = realpath(__DIR__ . '/../../../templates/mail/layout.phtml');
+        $layout = realpath(__DIR__ . '/../../../templates/zf-starter-mail/layout.phtml');
         if (!is_file($layout)) {
             throw new MailTemplateNotFoundException('Not found mail template');
         }
