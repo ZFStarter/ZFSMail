@@ -10,7 +10,6 @@ use ZFStarterMail\Exception\MailInvalidArgumentException;
 use ZFStarterMail\Exception\MailTemplateEmptyException;
 use ZFStarterMail\Exception\MailTemplateNotFoundException;
 use ZFStarterMail\Model\Manager\MailTemplatesManager;
-use Users\Model\Object\User;
 use Zend\ServiceManager\ServiceManager;
 
 class Mail
