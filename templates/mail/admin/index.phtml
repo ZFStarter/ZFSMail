@@ -1,0 +1,24 @@
+<?php /** @var  \Zend\View\Renderer\PhpRenderer $this */ ?>
+<?php $this->headLink()
+    ->appendStylesheet($this->basePath() . '/assets/css/datatables/dataTables.bootstrap.css', 'screen', false, null)
+    ->appendStylesheet($this->basePath() . '/assets/css/grid.css', 'screen', false, null);
+?>
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Mail templates list</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body table-responsive">
+        <?php /** @var \Grid\Grid $grid */ ?>
+        <?php echo $this->render($grid->getViewModel()); ?>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix">
+        <?php echo $this->paginationControl(
+            $grid->getItems(),
+            'jumping',
+            'layout/back/pagination-control',
+            array('route' => 'admin_mail_templates_list')
+        ); ?>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+    "name": "naxel/ZFStarterMail",
+    "description": "ZFStarterMail",
+    "keywords": [
+        "zf2",
+        "ZFStarter",
+        "ZFStarterMail"
+    ],
+    "homepage": "https://github.com/naxel/ZFStarterMail",
+    "license": "BSD-3-Clause",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.zendframework.com/"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "ZFStarterMail\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*"
+    }
+}
