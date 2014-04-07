@@ -192,7 +192,7 @@ class AdminController extends AbstractActionController
         /** @var MailTemplatesManager $manager */
         $manager = $this->getServiceLocator()->get('MailTemplatesManager');
 
-        /** @var $mailTemplate \DomainModel\Object\DomainModelMagic */
+        /** @var $mailTemplate \DomainModel\Object\DomainObjectMagic */
         $mailTemplate = $manager->getById($id);
         if (!$mailTemplate) {
             return $this->redirect()->toRoute('admin_mail_templates_list');

@@ -8,7 +8,7 @@ use Zend\Mime\Mime;
 use Zend\Mime\Part as MimePart;
 use Zend\Mail\Transport\Smtp as SmtpTransport;
 use Zend\Mail\Transport\SmtpOptions;
-use DomainModel\Object\DomainModelMagic;
+use DomainModel\Object\DomainObjectMagic;
 use Zend\ServiceManager\ServiceManager;
 
 /**
@@ -29,7 +29,7 @@ use Zend\ServiceManager\ServiceManager;
  * @property string status
  * @package Mail\Model
  */
-class MailTemplate extends DomainModelMagic
+class MailTemplate extends DomainObjectMagic
 {
     /** @var array */
     protected $primaryColumns = array(
