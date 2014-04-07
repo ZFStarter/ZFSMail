@@ -1,6 +1,7 @@
 <?php
 return array(
     'mail' => array(
+        'layout' => __DIR__ . '/../templates/zf-starter-mail/layout.phtml',
         'transport' => array(
             'host' => '127.0.0.1',
             'port' => '25'

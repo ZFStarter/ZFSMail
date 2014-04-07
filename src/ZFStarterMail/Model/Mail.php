@@ -16,6 +16,11 @@ class Mail
 {
 
     /**
+     * @var ServiceManager
+     */
+    public static $serviceManager;
+
+    /**
      * @param array $data
      * @throws \ZFStarterMail\Exception\MailInvalidArgumentException
      */
@@ -59,6 +64,7 @@ class Mail
     {
         self::checkParams($data);
 
+        self::$serviceManager = $serviceManager;
         /** @var MailTemplatesManager $manager */
         $manager = new MailTemplatesManager();
         $manager->setServiceManager($serviceManager);
@@ -87,7 +93,9 @@ class Mail
      */
     public static function getLayout()
     {
-        $layout = realpath(__DIR__ . '/../../../templates/zf-starter-mail/layout.phtml');
+        $config = self::$serviceManager->get('config');
+        $layoutPath = $config['mail']['layout'];
+        $layout = realpath($layoutPath);
         if (!is_file($layout)) {
             throw new MailTemplateNotFoundException('Not found mail template');
         }
