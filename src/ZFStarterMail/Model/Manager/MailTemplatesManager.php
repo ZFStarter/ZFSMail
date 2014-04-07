@@ -2,8 +2,8 @@
 namespace ZFStarterMail\Model\Manager;
 
 use Common\ServiceManager\AbstractService;
-use DomainObject\Gateway\DomainObjectTableGateway;
-use DomainObject\ResultSet\DomainObjectResultSet;
+use DomainModel\Gateway\DomainModelTableGateway;
+use DomainModel\ResultSet\DomainModelResultSet;
 use SelectOptions\SelectOptions;
 use ZFStarterMail\Model\MailTemplate;
 use Zend\Db\Sql\Select;
@@ -17,7 +17,7 @@ use Zend\Paginator\Adapter\DbTableGateway;
 class MailTemplatesManager extends AbstractService
 {
     /**
-     * @return DomainObjectTableGateway
+     * @return DomainModelTableGateway
      */
     protected function getGateway()
     {
@@ -103,7 +103,7 @@ class MailTemplatesManager extends AbstractService
     /**
      * @param SelectOptions $options
      *
-     * @return DomainObjectResultSet
+     * @return DomainModelResultSet
      */
     public function getMailTemplates($options)
     {

@@ -2,15 +2,15 @@
 
 namespace ZFStarterMail\Model\Gateway;
 
-use DomainObject\Feature\FilterColumnsFeature;
-use DomainObject\Gateway\DomainObjectTableGatewayAbstractFactory;
-use DomainObject\Gateway\DomainObjectTableGatewayAbstractFactory\Options;
+use DomainModel\Feature\FilterColumnsFeature;
+use DomainModel\Gateway\DomainModelTableGatewayAbstractFactory;
+use DomainModel\Gateway\DomainModelTableGatewayAbstractFactory\Options;
 
 /**
  * Class GatewayAbstractFactory
  * @package ZFStarterMail\Model\Gateway
  */
-class GatewayAbstractFactory extends DomainObjectTableGatewayAbstractFactory
+class GatewayAbstractFactory extends DomainModelTableGatewayAbstractFactory
 {
     public function __construct()
     {

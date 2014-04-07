@@ -34,6 +34,6 @@ class Module implements
      */
     public function getModuleDependencies()
     {
-        return array('Common', 'DomainObject', 'Rbac', 'Grid', 'SpecifiedLayout');
+        return array('Common', 'DomainModel', 'Rbac', 'Grid', 'SpecifiedLayout');
     }
 }
