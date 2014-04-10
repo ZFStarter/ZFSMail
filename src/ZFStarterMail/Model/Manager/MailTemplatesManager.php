@@ -57,7 +57,7 @@ class MailTemplatesManager extends AbstractService
     /**
      * Create mail template
      *
-     * @param \Users\Model\Object\User $user
+     * @param \Users\Model\Object\User\AbstractUserEx $user
      * @param array             $data
      *
      * @return null|MailTemplate
@@ -65,7 +65,7 @@ class MailTemplatesManager extends AbstractService
     public function createMailTemplate($user, $data)
     {
         $data['created'] = date('Y-m-d H:i:s');
-        $data['creator'] = $user->id;
+        $data['creator'] = $user->userId;
 
         $mailTemplate = new MailTemplate($data);
 
@@ -81,7 +81,7 @@ class MailTemplatesManager extends AbstractService
     /**
      * Update mail template
      *
-     * @param \Users\Model\Object\User $user
+     * @param \Users\Model\Object\User\AbstractUserEx $user
      * @param array             $data
      *
      * @return null|MailTemplate
@@ -89,7 +89,7 @@ class MailTemplatesManager extends AbstractService
     public function updateMailTemplate($user, $data)
     {
         $data['updated'] = date('Y-m-d H:i:s');
-        $data['updater'] = $user->id;
+        $data['updater'] = $user->userId;
 
         $mailTemplate = new MailTemplate($data);
 
