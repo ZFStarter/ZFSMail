@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/zfstarter/zfs-mail/v/stable.png)](https://packagist.org/packages/zfstarter/zfs-mail)
+[![Total Downloads](https://poser.pugx.org/zfstarter/zfs-mail/downloads.png)](https://packagist.org/packages/zfstarter/zfs-mail)
+[![Latest Unstable Version](https://poser.pugx.org/naxel/zfctool/v/unstable.png)](https://packagist.org/packages/zfstarter/zfs-mail)
+[![License](https://poser.pugx.org/zfstarter/zfs-mail/license.png)](https://packagist.org/packages/zfstarter/zfs-mail)
+
 ###Установка:
 
 Добавляем в `composer.json`:
