@@ -5,7 +5,7 @@
 ```json
 {
     "require-dev": {
-        "naxel/zfs-mail": "dev-master"
+        "zfstarter/mail": "dev-master"
     }
 }
 ```
