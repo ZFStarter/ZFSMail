@@ -2,15 +2,15 @@
 
 namespace ZFStarterMail\Model\Gateway;
 
-use DomainModel\Feature\FilterColumnsFeature;
-use DomainModel\Gateway\DomainObjectTableGatewayAbstractFactory;
-use DomainModel\Gateway\DomainObjectTableGatewayAbstractFactory\Options;
+use ZFS\DomainModel\Feature\FilterColumnsFeature;
+use ZFS\DomainModel\Gateway\AbstractFactory;
+use ZFS\DomainModel\Service\Options;
 
 /**
  * Class GatewayAbstractFactory
  * @package ZFStarterMail\Model\Gateway
  */
-class GatewayAbstractFactory extends DomainObjectTableGatewayAbstractFactory
+class GatewayAbstractFactory extends AbstractFactory
 {
     public function __construct()
     {
@@ -18,7 +18,7 @@ class GatewayAbstractFactory extends DomainObjectTableGatewayAbstractFactory
             'MailTemplatesGateway' => array(
                 Options::OPTION_TABLE_NAME              => 'mail_templates',
                 Options::OPTION_TABLE_FEATURES          => array(new FilterColumnsFeature()),
-                Options::OPTION_DOMAIN_OBJECT_PROTOTYPE => 'ZFStarterMail\Model\MailTemplate',
+                Options::OPTION_OBJECT_PROTOTYPE        => 'ZFStarterMail\Model\MailTemplate',
             )
         );
     }

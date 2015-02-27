@@ -146,7 +146,7 @@ return array(
     ),
     'service_manager' => array(
         'abstract_factories' => array(
-            'ZFStarterMail\Model\Manager\ManagerAbstractFactory',
+            //'ZFStarterMail\Model\Manager\ManagerAbstractFactory',
             'ZFStarterMail\Model\Gateway\GatewayAbstractFactory',
         )
     ),

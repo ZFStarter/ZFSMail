@@ -8,7 +8,7 @@ use Zend\Mime\Mime;
 use Zend\Mime\Part as MimePart;
 use Zend\Mail\Transport\Smtp as SmtpTransport;
 use Zend\Mail\Transport\SmtpOptions;
-use DomainModel\Object\DomainObjectMagic;
+use ZFS\DomainModel\Object\ObjectMagic as DomainObjectMagic;
 use Zend\ServiceManager\ServiceManager;
 
 /**

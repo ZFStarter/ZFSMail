@@ -9,19 +9,23 @@ use ZFStarterMail\Model\MailTemplate;
 use Zend\Db\Sql\Select;
 use Zend\Db\Sql\Where;
 use Zend\Paginator\Adapter\DbTableGateway;
+use Zend\ServiceManager\ServiceLocatorAwareInterface;
+use Zend\ServiceManager\ServiceLocatorAwareTrait;
 
 /**
  * Class MailTemplatesManager
  * @package ZFStarterMail\Model\Manager
  */
-class MailTemplatesManager extends AbstractService
+class MailTemplatesManager implements ServiceLocatorAwareInterface
 {
+    use ServiceLocatorAwareTrait;
+
     /**
      * @return DomainModelTableGateway
      */
     protected function getGateway()
     {
-        return $this->serviceManager->get('MailTemplatesGateway');
+        return $this->getServiceLocator()->get('MailTemplatesGateway');
     }
 
     /**
