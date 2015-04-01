@@ -67,7 +67,7 @@ class Mail
         self::$serviceManager = $serviceManager;
         /** @var MailTemplatesManager $manager */
         $manager = new MailTemplatesManager();
-        $manager->setServiceManager($serviceManager);
+        $manager->setServiceLocator($serviceManager);
         /** @var MailTemplate $template */
         $template = $manager->findByAlias($data['templateName']);
         if (!$template) {

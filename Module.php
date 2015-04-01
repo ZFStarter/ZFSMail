@@ -7,7 +7,6 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\DependencyIndicatorInterface;
 
 class Module implements
-    DependencyIndicatorInterface,
     ConfigProviderInterface,
     AutoloaderProviderInterface
 {
@@ -25,15 +24,5 @@ class Module implements
                 ),
             ),
         );
-    }
-
-    /**
-     * Expected to return an array of modules on which the current one depends on
-     *
-     * @return array
-     */
-    public function getModuleDependencies()
-    {
-        return array('Common', 'DomainModel', 'Rbac', 'Grid', 'SpecifiedLayout');
     }
 }
